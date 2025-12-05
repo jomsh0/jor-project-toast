@@ -4,6 +4,8 @@ import Button from "../Button";
 import Toast from "../Toast";
 import ToastShelf from "../ToastShelf";
 
+import { ToastContext } from "../ToastProvider";
+
 import styles from "./ToastPlayground.module.css";
 
 const VARIANT_OPTIONS = ["notice", "warning", "success", "error"];
@@ -11,12 +13,11 @@ const VARIANT_OPTIONS = ["notice", "warning", "success", "error"];
 function ToastPlayground() {
   const [message, setMessage] = React.useState("");
   const [variant, setVariant] = React.useState("notice");
-  const [toasts, setToasts] = React.useState([]);
+  const { addToast } = React.useContext(ToastContext);
 
   function handleSubmit(e) {
     e.preventDefault();
-    const id = Date.now();
-    setToasts([...toasts, { id, message, variant }]);
+    addToast(message, variant);
     setMessage("");
     setVariant("notice");
   }
@@ -28,21 +29,7 @@ function ToastPlayground() {
         <h1>Toast Playground</h1>
       </header>
 
-      {
-        <ToastShelf>
-          {toasts.map((toast) => (
-            <Toast
-              key={toast.id}
-              variant={toast.variant}
-              onDismiss={() =>
-                setToasts(toasts.filter(({ id }) => id !== toast.id))
-              }
-            >
-              {toast.message}
-            </Toast>
-          ))}
-        </ToastShelf>
-      }
+      <ToastShelf />
 
       <form className={styles.controlsWrapper} onSubmit={handleSubmit}>
         <div className={styles.row}>
@@ -59,6 +46,7 @@ function ToastPlayground() {
               className={styles.messageInput}
               value={message}
               required
+              autoFocus
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
