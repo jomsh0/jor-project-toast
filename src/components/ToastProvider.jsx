@@ -1,9 +1,12 @@
 import React from "react";
+import useEscapeKey from "../hooks/useEscapeKey";
 
 export const ToastContext = React.createContext();
 
 function ToastProvider({ children }) {
   const [toasts, setToasts] = React.useState([]);
+
+  useEscapeKey(clearToasts)
 
   function addToast(message, variant = "notice") {
     const id = Date.now();
