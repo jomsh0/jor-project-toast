@@ -154,7 +154,7 @@
   color: #fff;
   text-shadow: 0 0 10px #1e183980, 0 0 20px #1e183980, 0 0 40px #1e183980;
   padding-bottom: 32px;
-  font-size: 4.25rem;
+  font-size: min(2rem + 6vw, 4.25rem);
   line-height: 1.1;
   position: relative;
 }
@@ -207,12 +207,12 @@
 
 .d7rB_G_label {
   text-align: right;
-  flex-basis: 160px;
+  flex: 1;
   font-weight: 700;
 }
 
 .d7rB_G_inputWrapper {
-  flex: 1;
+  flex: 4;
 }
 
 .d7rB_G_radioWrapper {
