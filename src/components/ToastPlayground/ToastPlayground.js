@@ -5,7 +5,6 @@ import Toast from "../Toast";
 import ToastShelf from "../ToastShelf";
 
 import { ToastContext } from "../ToastProvider";
-import logo from '../../../assets/toast.png'
 
 import styles from "./ToastPlayground.module.css";
 
@@ -22,6 +21,8 @@ function ToastPlayground() {
     setMessage("");
     setVariant("notice");
   }
+
+  const { href: logo } = new URL('toast.png', import.meta.url)
 
   return (
     <div className={styles.wrapper}>
