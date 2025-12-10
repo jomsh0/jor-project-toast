@@ -245,6 +245,7 @@ var $f6d982f11c827e02$export$2e2bcd8739ae039 = $f6d982f11c827e02$var$ToastShelf;
 
 
 
+
 var $25f66500f9c8e9b1$exports = {};
 
 $parcel$export($25f66500f9c8e9b1$exports, "controlsWrapper", function () { return $25f66500f9c8e9b1$export$40c5ce6837c6905d; }, function (v) { return $25f66500f9c8e9b1$export$40c5ce6837c6905d = v; });
@@ -299,7 +300,7 @@ function $eec8da47e2b891d2$var$ToastPlayground() {
                 children: [
                     /*#__PURE__*/ (0, $ciORb$jsx)("img", {
                         alt: "Cute toast mascot",
-                        src: "/toast.png"
+                        src: (0, {})
                     }),
                     /*#__PURE__*/ (0, $ciORb$jsx)("h1", {
                         children: "Toast Playground"

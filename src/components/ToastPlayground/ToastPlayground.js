@@ -5,6 +5,7 @@ import Toast from "../Toast";
 import ToastShelf from "../ToastShelf";
 
 import { ToastContext } from "../ToastProvider";
+import logo from '../../../assets/toast.png'
 
 import styles from "./ToastPlayground.module.css";
 
@@ -25,7 +26,7 @@ function ToastPlayground() {
   return (
     <div className={styles.wrapper}>
       <header>
-        <img alt="Cute toast mascot" src="/toast.png" />
+        <img alt="Cute toast mascot" src={logo} />
         <h1>Toast Playground</h1>
       </header>
 
