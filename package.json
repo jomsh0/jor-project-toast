@@ -3,25 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "author": "Josh Comeau <me@joshwcomeau.com>",
-  "dependencies": {
-    "baseline-browser-mapping": "^2.9.3",
-    "caniuse-lite": "^1.0.30001759",
-    "eslint": "^8.49.0",
+  "module": "dist/index.js",
+  "targets": {
+    "app": {
+      "source": "public/index.html"
+    }
+  },
+  "devDependencies": {
+    "baseline-browser-mapping": "^2.9.6",
+    "caniuse-lite": "^1.0.30001760",
+    "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
     "new-component": "5.0.2",
-    "parcel": "2.16.1",
+    "parcel": "^2.16.3",
     "parcel-reporter-static-files-copy": "1.5.2",
-    "prettier": "2.6.2",
-    "process": "0.11.10",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-feather": "2.0.10",
-    "rimraf": "^5.0.1"
+    "prettier": "^3.7.4",
+    "process": "0.11.10"
+  },
+  "peerDependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "rimraf": "^6.1.2"
+  },
+  "dependencies": {
+    "react-feather": "2.0.10"
   },
   "scripts": {
     "predev": "rimraf .parcel-cache dist",
-    "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html",
+    "dev": "parcel --target app",
+    "build": "parcel build index.js",
     "new-component": "new-component"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
