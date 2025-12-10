@@ -37,6 +37,11 @@
     0.4px 34.2px 34.9px -3.2px hsl(var(--shadow-color) / 0.16);
 }
 
+.wrapper p {
+  font-size: 1rem;
+  margin-block: 0;
+}
+
 .wrapper header {
   position: relative;
   display: flex;

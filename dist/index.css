@@ -103,6 +103,7 @@
 }
 
 ._YfUPa_wrapper {
+  z-index: 10;
   flex-direction: column;
   gap: 16px;
   padding: 16px;
@@ -134,6 +135,11 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 64px 32px;
+}
+
+.d7rB_G_wrapper p {
+  margin-block: 0;
+  font-size: 1rem;
 }
 
 .d7rB_G_wrapper header {
